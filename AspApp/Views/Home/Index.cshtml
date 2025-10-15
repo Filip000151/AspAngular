@@ -1,0 +1,46 @@
+﻿@model List<AspApp.Models.EmployeeTotalWorkTime>
+@{
+    ViewData["Title"] = "C# assignment";
+}
+
+<h1 class="display-4 mb-4 text-center">C# assignment</h1>
+
+@if(ViewBag.Error != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.Error
+    </div>
+}
+
+<div class="container">
+    <table class="table mt-2">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Total hours worked</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var e in Model)
+            {
+                var rowClass = e.TotalHours < 100 ? "table-warning" : "";
+                <tr class="@rowClass">
+                    <td>@e.EmployeeName</td>
+                    <td>@e.TotalHours.ToString("F2")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+    <div class="d-flex justify-content-center">
+        @if(ViewBag.ChartPath != null)
+        {
+            <img src="@Url.Action("GetPieChart", "Home")" alt="Employee hours pie chart" class="img-fluid"/>
+        }
+        else
+        {
+            <p>Chart not available</p>
+        }
+    </div>
+</div>
