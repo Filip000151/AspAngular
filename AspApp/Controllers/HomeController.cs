@@ -88,7 +88,7 @@ namespace AspApp.Controllers
             graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
             var titleFont = new Font("Arial", 16, FontStyle.Bold);
-            graphics.DrawString("Total hours worked by employee", titleFont, Brushes.Black, 50, 10);
+            graphics.DrawString("Employee time distribution", titleFont, Brushes.Black, 50, 10);
 
             var totalHours = employees.Sum(e => e.TotalHours);
             var startAngle = 0f;
@@ -125,7 +125,7 @@ namespace AspApp.Controllers
             {
                 var employee = employees[i];
                 var percent = (employee.TotalHours / totalHours * 100).ToString("0.0");
-                var text = $"{employee.EmployeeName} - {percent}% ({employee.TotalHours:0} hours";
+                var text = $"{employee.EmployeeName} - {percent}%";
 
                 using var colorBrush = new SolidBrush(colors[i]);
                 graphics.FillRectangle(colorBrush, 500, legendY, 15, 15);

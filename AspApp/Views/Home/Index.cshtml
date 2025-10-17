@@ -26,7 +26,7 @@
                 var rowClass = e.TotalHours < 100 ? "table-warning" : "";
                 <tr class="@rowClass">
                     <td>@e.EmployeeName</td>
-                    <td>@e.TotalHours.ToString("F2")</td>
+                    <td>@e.TotalHours.ToString("F2") hours</td>
                 </tr>
             }
         </tbody>
