@@ -1,0 +1,47 @@
+.chart-container {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 30px auto;
+}
+
+.custom-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+}
+
+.color-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.legend-name {
+  font-weight: 500;
+  color: #333;
+  min-width: 120px;
+  text-align: left;
+}
+
+h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}

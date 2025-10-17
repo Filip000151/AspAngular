@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+table, th, td{
+    border: solid black 1px;
+    border-collapse: collapse;
+    padding: 1em;
+}
+th{
+    background-color: gray;
+}
+.highlight{
+    background-color: orange;
+}

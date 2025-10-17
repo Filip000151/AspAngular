@@ -1,0 +1,20 @@
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Name of the employee</th>
+                <th>Hours worked</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (emp of employees; track $index){
+                <tr [class.highlight]="emp.HoursWorked < 100">
+                    <td>{{emp.EmployeeName}}</td>
+                    <td>{{emp.HoursWorked | number:'1.0-0'}} hours</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <app-pie-chart [employees]="employees"></app-pie-chart>
+</div>

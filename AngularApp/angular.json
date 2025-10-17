@@ -5,17 +5,7 @@
   "projects": {
     "AngularApp": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -72,10 +62,7 @@
               "buildTarget": "AngularApp:build:development"
             }
           },
-          "defaultConfiguration": "development",
-          "options": {
-            "port": 56506
-          }
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"
@@ -96,8 +83,7 @@
             ],
             "styles": [
               "src/styles.css"
-            ],
-            "karmaConfig": "karma.conf.js"
+            ]
           }
         }
       }

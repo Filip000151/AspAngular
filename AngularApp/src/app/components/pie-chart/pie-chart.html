@@ -1,0 +1,24 @@
+<div class="chart-container">
+  <h3>Employee Time Distribution</h3>
+  
+  <div class="chart-wrapper">
+    <igx-pie-chart
+      [dataSource]="chartData()"
+      height="400px"
+      width="500px"
+      labelMemberPath="percentage"
+      valueMemberPath="totalTimeWorked"
+      [labelsPosition]="'BestFit'"
+      [brushes]="colors">
+    </igx-pie-chart>
+  </div>
+
+  <div class="custom-legend">
+    @for (emp of chartData(); track emp.name; let i = $index) {
+      <div class="legend-item">
+        <span class="color-box" [style.background]="colors[i % colors.length]"></span>
+        <span class="legend-name">{{ emp.name }}</span>
+      </div>
+    }
+  </div>
+</div>
